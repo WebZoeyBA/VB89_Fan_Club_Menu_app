@@ -10,6 +10,14 @@ class Accessories extends StatefulWidget {
 class _AccessoriesState extends State<Accessories> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Second screen',
+        ),
+        backgroundColor: Colors.black,
+      ),
+      body: ListView(children: []),
+    );
   }
 }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/accessories_menu.dart';
+import 'package:flutter_application_1/screens/drinks_menu.dart';
 import 'package:flutter_application_1/screens/home.dart';
+import 'package:flutter_application_1/screens/loading.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,6 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoadingScreen(),
+        '/home': (context) => Home(),
+        '/drinks_menu': (context) => DrinksMenu(),
+        '/accessories_menu': (context) => Accessories()
+      },
       debugShowCheckedModeBanner: false,
       title: 'VB89 Menu',
       home: Home(),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/accessories_menu.dart';
 import 'package:flutter_application_1/screens/drinks_menu.dart';
 import 'package:flutter_application_1/shared/screentitles.dart';
+import 'package:flutter_application_1/shared/home_menu_tiles.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -53,31 +54,5 @@ class _HomeState extends State<Home> {
             ),
           ],
         ));
-  }
-}
-
-class HomeMenuTile extends StatefulWidget {
-  final Widget iconname;
-  final Widget tiletitle;
-  final Widget homeroute;
-  HomeMenuTile(
-      {required this.iconname,
-      required this.tiletitle,
-      required this.homeroute});
-
-  @override
-  State<HomeMenuTile> createState() => _HomeMenuTileState();
-}
-
-class _HomeMenuTileState extends State<HomeMenuTile> {
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-        leading: widget.iconname,
-        title: widget.tiletitle,
-        onTap: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => widget.homeroute));
-        });
   }
 }
