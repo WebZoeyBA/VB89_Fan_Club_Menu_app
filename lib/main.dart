@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => LoadingScreen(),
         '/home': (context) => Home(),
         '/drinks_menu': (context) => DrinksMenu(),
-        '/accessories_menu': (context) => Accessories()
+        '/accessories_menu': (context) => Accessories(),
       },
       debugShowCheckedModeBanner: false,
       title: 'VB89 Menu',
